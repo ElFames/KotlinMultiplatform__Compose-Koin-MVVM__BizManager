@@ -1,0 +1,66 @@
+*.iml
+.gradle
+**/build/
+xcuserdata
+!src/**/build/
+local.properties
+.idea
+.DS_Store
+captures
+.externalNativeBuild
+.cxx
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# IntelliJ IDEA
+.idea/
+
+# Gradle
+.gradle/
+build/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Kotlin-specific
+*.kotlin_module
+*.jvm
+*.js
+*.metadata
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Android
+/.externalNativeBuild
+/captures/
+
+# Gradle Wrapper
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Maven
+target/
+
+# Eclipse
+.settings/
+bin/
+*.launch
+*.swp
+.project
+.classpath
+
+# Visual Studio Code
+.vscode/
+
+# Android Studio
+/.idea/
+/navigation/
