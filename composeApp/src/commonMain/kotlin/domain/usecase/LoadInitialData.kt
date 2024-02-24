@@ -1,13 +1,16 @@
 package domain.usecase
 
+import application.clients.domain.ClientRepository
+import application.dashboard.domain.DashboardRepository
+
 class LoadInitialData(
-    //private val clientsRepository: ClientsRepository,
-    //private val dashboardRepository: DashboardRepository,
+    private val clientsRepository: ClientRepository,
+    private val dashboardRepository: DashboardRepository,
     //private val productsRepository: ProductsRepository
 ) {
     suspend operator fun invoke() {
-        //clientsRepository.loadClients()
-        //dashboardRepository.loadStatistics()
+        clientsRepository.loadClients()
+        dashboardRepository.loadStatistics()
         //productsRepository.loadProducts()
 
     }

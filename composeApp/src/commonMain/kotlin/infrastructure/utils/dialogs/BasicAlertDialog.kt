@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.dialogs
 
 import androidx.compose.material.AlertDialog
 import androidx.compose.material.Icon

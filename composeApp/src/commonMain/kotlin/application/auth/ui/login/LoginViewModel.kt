@@ -12,9 +12,9 @@ import moe.tlaster.precompose.viewmodel.viewModelScope
 
 class LoginViewModel(
     private val repository: AuthRepository,
-    private val loadInitialData: LoadInitialData
+    private val loadInitData: LoadInitialData
 ): ViewModel() {
-    private val _uiState = MutableStateFlow(UiState.IDLE)
+    private val _uiState = MutableStateFlow(UiState.SUCCESS)
     val uiState: StateFlow<UiState> = _uiState
 
     private val _email = MutableStateFlow<String>("")
@@ -57,7 +57,7 @@ class LoginViewModel(
 
     fun loadInitialData() {
         viewModelScope.launch {
-            loadInitialData()
+            loadInitData()
         }
     }
     fun finishLogin() {

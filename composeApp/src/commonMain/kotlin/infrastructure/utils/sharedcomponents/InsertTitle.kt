@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.sharedcomponents
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -16,20 +15,16 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import moe.tlaster.precompose.navigation.Navigator
+import infrastructure.utils.values.buttonColor
 
 @Composable
-fun ScreenTitleWithBackButton(title: String, navController: Navigator) {
+fun InsertTitle(title: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(color = Color.DarkGray),
-        horizontalArrangement = Arrangement.Start,
-        verticalAlignment = Alignment.CenterVertically
+            .background(color = Color.DarkGray), horizontalArrangement = Arrangement.Center
     ) {
-        BackStackButton(navController = navController, Color.White)
         Text(
-            modifier = Modifier.padding(16.dp),
             text = title,
             style = TextStyle(
                 fontSize = 22.sp,
@@ -37,7 +32,8 @@ fun ScreenTitleWithBackButton(title: String, navController: Navigator) {
                 fontFamily = FontFamily.Serif,
                 fontStyle = FontStyle.Italic
             ),
-            color = buttonColor
+            color = buttonColor,
+            modifier = Modifier.padding(16.dp)
         )
     }
 }

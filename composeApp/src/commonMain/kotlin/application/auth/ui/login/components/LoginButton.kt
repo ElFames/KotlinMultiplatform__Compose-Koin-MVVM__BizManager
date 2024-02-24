@@ -14,8 +14,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import infrastructure.utils.buttonColor
-import infrastructure.utils.disabledButtonColor
+import infrastructure.utils.values.buttonColor
+import infrastructure.utils.values.disabledButtonColor
 
 @Composable
 fun LoginButton(loginEnable: Boolean, onLoginSelected: () -> Unit) {

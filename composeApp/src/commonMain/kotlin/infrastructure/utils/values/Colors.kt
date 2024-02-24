@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.values
 
 import androidx.compose.ui.graphics.Color
 

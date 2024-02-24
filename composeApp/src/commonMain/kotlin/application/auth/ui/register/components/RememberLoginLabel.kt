@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import infrastructure.navigation.AppScreens
-import infrastructure.utils.buttonColor
+import infrastructure.utils.values.buttonColor
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable

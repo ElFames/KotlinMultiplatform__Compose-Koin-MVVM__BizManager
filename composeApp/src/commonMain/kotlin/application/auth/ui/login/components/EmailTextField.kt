@@ -2,7 +2,6 @@ package application.auth.ui.login.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -21,8 +20,8 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import infrastructure.utils.authBackgroundColor
-import infrastructure.utils.buttonColor
+import infrastructure.utils.values.authBackgroundColor
+import infrastructure.utils.values.buttonColor
 
 @Composable
 fun EmailTextField(email: String, onLoginChange: (String) -> Unit) {

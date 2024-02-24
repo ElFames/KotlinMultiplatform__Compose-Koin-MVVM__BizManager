@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.values
 
 object Formats {
     val time: (Int) -> String = { "%02d".format(it) }

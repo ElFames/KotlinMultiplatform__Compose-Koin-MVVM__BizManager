@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.sharedcomponents
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -13,9 +14,9 @@ import androidx.compose.ui.unit.dp
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
-fun BackStackButton(navController: Navigator, color: Color) {
+fun BackScreenButton(navController: Navigator, color: Color) {
     Icon(
-        imageVector = Icons.Default.ArrowBack,
+        imageVector = Icons.Outlined.ArrowBack,
         contentDescription = "back_button",
         modifier = Modifier
             .size(55.dp)

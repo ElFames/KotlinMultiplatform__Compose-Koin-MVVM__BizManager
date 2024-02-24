@@ -1,3 +1,5 @@
+package infrastructure.expectfuns
+
 interface Platform {
     val name: String
     val type: PlatformType

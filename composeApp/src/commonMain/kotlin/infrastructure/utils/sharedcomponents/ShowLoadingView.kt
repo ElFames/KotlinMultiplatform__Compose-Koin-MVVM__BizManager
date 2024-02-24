@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.sharedcomponents
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import infrastructure.utils.values.authBackgroundColor
 import kotlinx.coroutines.delay
 
 @Composable

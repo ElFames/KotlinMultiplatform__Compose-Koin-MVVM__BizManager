@@ -1,4 +1,4 @@
-package infrastructure.utils
+package infrastructure.utils.sharedcomponents
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Spacer

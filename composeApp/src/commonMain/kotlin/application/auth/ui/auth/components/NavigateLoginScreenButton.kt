@@ -1,6 +1,5 @@
 package application.auth.ui.auth.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -16,8 +15,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import infrastructure.navigation.AppScreens
-import infrastructure.utils.buttonColor
-import infrastructure.utils.disabledButtonColor
+import infrastructure.utils.values.buttonColor
+import infrastructure.utils.values.disabledButtonColor
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable

@@ -19,16 +19,17 @@ import application.auth.ui.login.components.RememberRegisterLabel
 import application.auth.ui.login.components.EmailTextField
 import application.auth.ui.login.components.PasswordTextField
 import domain.models.UiState
-import infrastructure.utils.HorizontalLine
-import infrastructure.utils.BasicAlertDialog
-import infrastructure.utils.ShowLoadingView
-import infrastructure.utils.authBackgroundColor
-import infrastructure.utils.buttonColor
+import infrastructure.utils.sharedcomponents.HorizontalLine
+import infrastructure.utils.dialogs.BasicAlertDialog
+import infrastructure.utils.sharedcomponents.ShowLoadingView
+import infrastructure.utils.values.authBackgroundColor
+import infrastructure.utils.values.buttonColor
+import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun LoginScreen(viewModel: LoginViewModel, navController: Navigator, initApp: () -> Unit) {
-    val uiState: UiState by viewModel.uiState.collectAsState()
+    val uiState: UiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     when (uiState) {
         UiState.IDLE -> ShowLoginScreen(viewModel, navController)
@@ -55,9 +56,9 @@ fun LoginScreen(viewModel: LoginViewModel, navController: Navigator, initApp: ()
 
 @Composable
 private fun ShowLoginScreen(viewModel: LoginViewModel, navController: Navigator) {
-    val email: String by viewModel.email.collectAsState()
-    val password: String by viewModel.password.collectAsState()
-    val loginEnable: Boolean by viewModel.loginEnable.collectAsState()
+    val email: String by viewModel.email.collectAsStateWithLifecycle()
+    val password: String by viewModel.password.collectAsStateWithLifecycle()
+    val loginEnable: Boolean by viewModel.loginEnable.collectAsStateWithLifecycle()
 
     LazyColumn(
         modifier = Modifier
