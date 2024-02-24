@@ -16,6 +16,14 @@ import application.clients.ui.newclient.NewClientScreen
 import application.clients.ui.newclient.NewClientViewModel
 import application.dashboard.ui.DashboardScreen
 import application.dashboard.ui.DashboardViewModel
+import application.products.ui.editproduct.EditProductScreen
+import application.products.ui.editproduct.EditProductViewModel
+import application.products.ui.myproducts.MyProductsScreen
+import application.products.ui.myproducts.MyProductsViewModel
+import application.products.ui.newproducts.NewProductScreen
+import application.products.ui.newproducts.NewProductViewModel
+import application.products.ui.productdetail.ProductDetailScreen
+import application.products.ui.productdetail.ProductDetailViewModel
 import moe.tlaster.precompose.koin.koinViewModel
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.Navigator
@@ -71,14 +79,34 @@ fun AppNavigation(navigator: Navigator) {
             val viewModel = koinViewModel(vmClass = DashboardViewModel::class)
             DashboardScreen(viewModel)
         }
-        /** PRODUCTS SCREEN **/
-        scene(route = BottomBarScreens.ProductsScreen.route) {
 
+        /** PRODUCTS SCREEN **/
+        // Product Detail Screen
+        scene(route = AppScreens.ProductDetailScreen.route) {
+            val viewModel = koinViewModel(vmClass = ProductDetailViewModel::class)
+            ProductDetailScreen(viewModel, navigator, IDs.productId)
         }
+        // My Product Screen
+        scene(route = BottomBarScreens.MyProductsScreen.route) {
+            val viewModel = koinViewModel(vmClass = MyProductsViewModel::class)
+            MyProductsScreen(viewModel, navigator)
+        }
+        // Edit Product Screen
+        scene(route = AppScreens.EditProductScreen.route) {
+            val viewModel = koinViewModel(vmClass = EditProductViewModel::class)
+            EditProductScreen(viewModel, navigator, IDs.productId)
+        }
+        // New Product Screen
+        scene(route = AppScreens.NewProductScreen.route) {
+            val viewModel = koinViewModel(vmClass = NewProductViewModel::class)
+            NewProductScreen(viewModel, navigator)
+        }
+
         /** TPV SCREEN **/
         scene(route = BottomBarScreens.TpvPosScreen.route) {
 
         }
+
         /** SETTINGS SCREEN **/
         scene(route = BottomBarScreens.SettingsScreen.route) {
 

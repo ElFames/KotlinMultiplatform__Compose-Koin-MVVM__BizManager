@@ -1,6 +1,6 @@
 package domain.models
 
-import application.products.Product
+import application.products.domain.models.Product
 import kotlinx.serialization.Serializable
 
 

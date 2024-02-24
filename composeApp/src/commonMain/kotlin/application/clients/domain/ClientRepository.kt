@@ -2,8 +2,8 @@ package application.clients.domain
 
 import application.clients.data.ClientsService
 import application.clients.domain.models.Client
-import application.products.Product
-import application.products.SubProduct
+import application.products.domain.models.Product
+import application.products.domain.models.SubProduct
 import domain.models.Purchase
 import domain.models.getCurrentDateTime
 import java.util.UUID

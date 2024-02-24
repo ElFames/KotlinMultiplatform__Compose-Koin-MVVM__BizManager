@@ -4,5 +4,5 @@ import domain.usecase.LoadInitialData
 import org.koin.dsl.module
 
 val useCaseModule = module {
-    single { LoadInitialData(get(), get()) }
+    single { LoadInitialData(get(), get(), get()) }
 }

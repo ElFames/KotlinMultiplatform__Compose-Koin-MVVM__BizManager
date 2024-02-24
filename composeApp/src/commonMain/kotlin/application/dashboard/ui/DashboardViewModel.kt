@@ -1,7 +1,7 @@
 package application.dashboard.ui
 
 import application.dashboard.domain.DashboardRepository
-import application.products.Product
+import application.products.domain.models.Product
 import domain.models.UiState
 import fames.systems.bizmanager.application.dashboard.domain.models.Filter
 import kotlinx.coroutines.flow.MutableStateFlow

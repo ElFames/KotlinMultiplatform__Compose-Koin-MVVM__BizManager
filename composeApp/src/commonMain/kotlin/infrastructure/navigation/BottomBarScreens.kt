@@ -18,7 +18,7 @@ sealed class BottomBarScreens(val route: String, val title: String, val icon: Im
     data object TpvPosScreen :
         BottomBarScreens(route = "tpv_pos", title = "TPV", icon = Icons.Outlined.ShoppingCart)
 
-    data object ProductsScreen :
+    data object MyProductsScreen :
         BottomBarScreens(route = "products", title = "Productos", icon = Icons.Outlined.Home)
 
     data object SettingsScreen :
@@ -30,7 +30,7 @@ sealed class BottomBarScreens(val route: String, val title: String, val icon: Im
                 DashboardScreen,
                 MyClientsScreen,
                 TpvPosScreen,
-                ProductsScreen,
+                MyProductsScreen,
                 SettingsScreen
             )
         }

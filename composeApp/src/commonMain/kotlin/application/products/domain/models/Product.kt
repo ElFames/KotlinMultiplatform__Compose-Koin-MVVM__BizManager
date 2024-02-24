@@ -1,4 +1,4 @@
-package application.products
+package application.products.domain.models
 
 import kotlinx.serialization.Serializable
 
